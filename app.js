@@ -16,6 +16,7 @@ const dataItemSchema = new mongoose.Schema({
   label: String,
   key: String,
   value: String,
+  description: String,
   lastUpdate: Date,
 });
 
@@ -31,6 +32,7 @@ app.post('/api/dataitem', (req, res) => {
     label: req.body.label,
     key: req.body.key,
     value: req.body.value,
+    description: req.body.description,
     lastUpdate: new Date(),
   });
 
@@ -63,6 +65,7 @@ app.put('/api/dataitem/:id', (req, res) => {
       label: req.body.label,
       key: req.body.key,
       value: req.body.value,
+      description: req.body.description,
       lastUpdate: new Date(),
     },
     { new: true }
