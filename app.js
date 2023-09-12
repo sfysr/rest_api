@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const uri = 'mongodb+srv://muhammetsefayasar:MSYasardatabasepass@cluster0.qnd5thx.mongodb.net/';
 const app = express();
 const port = process.env.PORT || 3000;
+const cors = require('cors');
 
 // MongoDB bağlantısı
 mongoose.connect(uri, {
@@ -19,6 +20,8 @@ const dataItemSchema = new mongoose.Schema({
 });
 
 const DataItem = mongoose.model('DataItem', dataItemSchema);
+
+app.use(cors());
 
 app.use(express.json());
 
