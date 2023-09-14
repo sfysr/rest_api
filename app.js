@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const uri = 'mongodb+srv://muhammetsefayasar:MSYasardatabasepass@cluster0.qnd5thx.mongodb.net/';
+const uri = 'mongodb+srv://<username>:<password>@cluster0.qnd5thx.mongodb.net/';
 const app = express();
 const port = process.env.PORT || 3000;
 const cors = require('cors');
